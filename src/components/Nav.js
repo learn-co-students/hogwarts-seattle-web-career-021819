@@ -1,7 +1,9 @@
 import piggy from '../porco.png'
 import React from 'react'
+import GreaseFilter from './GreaseFilter'
+import SortFilter from './SortFilter'
 
-const Nav = () => {
+const Nav = (props) => {
 	return (
 		<div className="navWrapper">
 			<span className="headerText">Hogwarts</span>
@@ -11,6 +13,8 @@ const Nav = () => {
 				</a>
 			</div>
 			<span className="normalText">A React App for County Fair Hog Fans</span>
+			<GreaseFilter updateFilter={props.updateFilter}/>
+			<SortFilter updateFilter={props.updateFilter}/>
 		</div>
 	)
 }
